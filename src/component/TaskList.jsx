@@ -11,12 +11,19 @@ import { useQueryClient } from "@tanstack/react-query";
 import { CircularProgress } from "@mui/material";
 import { useQuery, useMutation } from "@tanstack/react-query";
 const TaskList = () => {
+  //query client
   const queryClient = useQueryClient();
-  const [status, setStatus] = useState("InComplete"); // Default value
+
+  //use context
+  const darkTheme = useContext(ThemeContext);
+
+  //use states
+  const [status, setStatus] = useState("InComplete");
   const [taskIdToDelete, setTaskIdToDelete] = useState(null);
   const [showFullNote, setShowFullNote] = useState(false);
-  const maxLength = 100; // Define the character limit for truncation
-  const darkTheme = useContext(ThemeContext);
+
+  // Define the character limit for truncation
+  const maxLength = 100;
 
   // Fetch tasks query
   const todosQuery = useQuery({

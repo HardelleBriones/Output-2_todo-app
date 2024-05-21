@@ -6,14 +6,16 @@ import { useMutation } from "@tanstack/react-query";
 import { useQueryClient } from "@tanstack/react-query";
 import { TextField, Button } from "@mui/material";
 import dayjs from "dayjs";
-import { toast } from "react-toastify";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { DateTimePicker } from "@mui/x-date-pickers/DateTimePicker";
 import { useForm, Controller } from "react-hook-form";
 
 const NewTask = () => {
+  //use navigate
   const navigate = useNavigate();
+
+  //query client
   const queryClient = useQueryClient();
 
   // Mutation to add a new task
@@ -45,7 +47,7 @@ const NewTask = () => {
       date: formattedDate,
       status: "InComplete",
     };
-    toast.success("Successfully added task");
+
     try {
       await newTodoMutation.mutateAsync(newTask);
       setValue("task", "");
