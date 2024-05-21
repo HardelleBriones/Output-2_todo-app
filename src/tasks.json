@@ -1,0 +1,37 @@
+[
+  {
+    "id": "a34f",
+    "task": "homework",
+    "note": "complete math assignment",
+    "date": "2024-05-16",
+    "status": "InComplete"
+  },
+  {
+    "id": "b57c",
+    "task": "workout",
+    "note": "go for a run",
+    "date": "2024-05-17",
+    "status": "Complete"
+  },
+  {
+    "id": "c83e",
+    "task": "cleaning",
+    "note": "tidy up the living room",
+    "date": "2024-05-18",
+    "status": "Complete"
+  },
+  {
+    "id": "c83e",
+    "task": "History assignment",
+    "note": "For the upcoming history project, you are required to choose a significant event from World War II and analyze its impact on global politics, economy, and society.",
+    "date": "2024-05-17",
+    "status": "InComplete"
+  },
+  {
+    "id": "5dea",
+    "task": "Morning Run",
+    "note": "Until at the top of Mountain",
+    "date": "2024-05-15",
+    "status": "Complete"
+  }
+]
