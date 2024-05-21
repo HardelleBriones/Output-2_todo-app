@@ -132,7 +132,7 @@ const TaskList = () => {
           ) : (
             todosQuery.data.map((task) => (
               <div
-                className="flex flex-row bg-gray-300 rounded-lg mb-4 hover:bg-blue-400"
+                className="flex flex-col md:flex-row bg-gray-300 rounded-lg mb-4 hover:bg-blue-400"
                 key={task.id}
               >
                 <div className="w-full md:w-1/4 px-6 py-4">{task.task}</div>
@@ -151,11 +151,11 @@ const TaskList = () => {
                     </button>
                   )}
                 </div>
-                <div className="w-1/4 px-6 py-4 text-center">
+                <div className="w-full md:w-1/4 px-6 py-4 text-center">
                   <p className="text-gray-800">{task.date}</p>
                 </div>
                 <div className="w-full md:w-1/12 px-6 py-4 flex justify-center">
-                  <div className="flex">
+                  <div className="flex space-x-4">
                     {status !== "Complete" && (
                       <FaCheckCircle
                         size={30}
